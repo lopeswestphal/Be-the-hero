@@ -7,13 +7,14 @@ const AppStack = createStackNavigator();
 import Incidents from './pages/Incidents';
 import Detail from './pages/Detail';
 
+// AppStack.Screen serve para cada uma das rotas da aplicação.
 export default function Routes() {
     return (
         <NavigationContainer>
 
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 <AppStack.Screen name="Incidents" component={Incidents} />
-                <AppStack.Screen name="Detail" component={Detail} />
+                <AppStack.Screen name="Detail" component={Detail} /> 
             </AppStack.Navigator>
 
         </NavigationContainer>

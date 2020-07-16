@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, FlatList, Image, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
@@ -65,7 +65,7 @@ export default function Incidents() {
                 keyExtractor={incident => String(incident.id)}
                 //showsVerticalScrollIndicator={false}
                 onEndReached={loadIncidents}
-                onEndReachedThreshold={0.2}
+                onEndReachedThreshold={0.2} // em procentagem do final da lista pra reiniciar.
                 renderItem={({ item: incident }) => (
                     <View style={styles.incident}>
                     <Text style={styles.incidentProperty}>ONG:</Text>
